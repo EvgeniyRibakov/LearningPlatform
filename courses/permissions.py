@@ -15,11 +15,11 @@ class IsOwnerOrTeacher(permissions.BasePermission):
             return True
         if isinstance(obj, Section) or isinstance(obj, Test):
             return request.user.is_authenticated and (
-                request.user.role == 'teacher' and obj.created_by == request.user
+                    request.user.role == 'teacher' and obj.created_by == request.user
             )
         if isinstance(obj, TestResult):
             return request.user.is_authenticated and (
-                request.user.role == 'teacher' or obj.student == request.user
+                    request.user.role == 'teacher' or obj.student == request.user
             )
         return False
 
