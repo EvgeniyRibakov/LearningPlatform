@@ -1,0 +1,17 @@
+[flake8]
+exclude =
+    .venv,
+    __pycache__,
+    *.pyc,
+    *.pyo,
+    *.pyd,
+    *.egg,
+    *.egg-info,
+    dist,
+    build,
+    env,
+    venv,
+    *.sqlite3,
+    media
+max-line-length = 79
+ignore = E203,E501
